@@ -71,10 +71,39 @@ Automatically act on your data and communicate using third-party services like T
 
 
 # PROGRAM:
+```
+NAME : MOHAMED AZEEM N
+REG NO : 212222110026
 
+const int trigPin = 9;
+const int echoPin = 10;
+
+long duration;
+int distance;
+void setup() {
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
+Serial.begin(9600);
+}
+
+void loop() 
+{
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance= duration*0.034/2;
+  Serial.print("Distance: ");
+  Serial.println(distance);
+}
+```
 # CIRCUIT DIAGRAM:
+![image](https://github.com/BharathCSEIOT/Uploading-sensor-data-in-Thing-Speak-cloud/assets/122793480/e3e5b5ba-1561-4743-92ce-1b05ee10a54a)
 
 # OUTPUT:
+![image](https://github.com/BharathCSEIOT/Uploading-sensor-data-in-Thing-Speak-cloud/assets/122793480/6654a436-aaf6-45a1-ac73-efa798143801)
 
 # RESULT:
 
